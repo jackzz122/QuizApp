@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/brain"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/brain"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QuizApp_BTL"
+        tools:targetApi="31">
+        <activity
+            android:name=".QuesForUser.ScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuesForUser.ShowQues"
+            android:exported="false" />
+        <activity
+            android:name=".AddQuestions.DetailQues"
+            android:exported="false"
+            android:label="@string/title_activity_detail_ques"
+            android:theme="@style/Theme.QuizApp_BTL" />
+        <activity
+            android:name=".AddQuestions.QuestionActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".User_Account.UserAccountActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".History.HistoryActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".Information.InformationActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Login_Register.Register"
+            android:exported="false" />
+        <activity
+            android:name=".Login_Register.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

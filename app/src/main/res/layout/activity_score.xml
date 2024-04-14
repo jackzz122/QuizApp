@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/dark_blue"
+    >
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#02052e">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Your Score"
+            android:textColor="#ffffff"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/background"
+        android:elevation="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/trophy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Congratulation!!!"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/all32" />
+
+                        <TextView
+                            android:id="@+id/MaxQues"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="10"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/checked32" />
+
+                        <TextView
+                            android:id="@+id/totalCorrect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="8"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cross32" />
+
+                        <TextView
+                            android:id="@+id/wrongAns"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="2"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="70dp"
+                    android:orientation="vertical">
+
+                    <me.tankery.lib.circularseekbar.CircularSeekBar
+                        android:id="@+id/circular"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cs_circle_color="@android:color/holo_red_light"
+                        app:cs_circle_progress_color="@android:color/holo_green_light"
+                        app:cs_circle_stroke_width="10dp"
+                        app:cs_circle_style="round"
+                        app:cs_circle_x_radius="0dp"
+                        app:cs_circle_y_radius="0dp"
+                        app:cs_disable_pointer="true"
+                        app:cs_disable_progress_glow="true"
+                        app:cs_hide_progress_when_empty="true"
+                        app:cs_lock_enabled="true"
+                        app:cs_maintain_equal_circle="true"
+                        app:cs_max="100"
+                        app:cs_move_outside_circle="true"
+                        app:cs_negative_enabled="false"
+                        app:cs_pointer_alpha_ontouch="0"
+                        app:cs_pointer_angle="0"
+                        app:cs_pointer_color="@android:color/holo_red_light"
+                        app:cs_pointer_stroke_width="10dp"
+                        app:cs_progress="80"
+                        app:cs_use_custom_radii="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="8/10"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/Share"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="handleHistory"
+                android:text="history" />
+
+            <Button
+                android:id="@+id/closeScore"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="handleClose"
+                android:text="Close" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

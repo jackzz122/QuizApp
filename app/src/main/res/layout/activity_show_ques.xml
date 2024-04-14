@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddQuestions.DetailQues">
+
+
+    <TextView
+        android:id="@+id/txtquestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/light_blue"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:text="1. question"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdA"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtquestion">
+
+        <TextView
+            android:id="@+id/ansA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="handleAnsw"
+            android:padding="10dp"
+            android:text="A" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdB"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cdA"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/ansB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="handleAnsw"
+            android:padding="10dp"
+            android:text="B" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdC"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cdB">
+
+        <TextView
+            android:id="@+id/ansC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="handleAnsw"
+            android:padding="10dp"
+            android:text="C" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView10"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cdC">
+
+        <TextView
+            android:id="@+id/ansD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="handleAnsw"
+            android:padding="10dp"
+            android:text="D" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="68dp"
+        android:text="Confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView10"
+        android:onClick="handleConfirmAns"/>
+
+    <Button
+        android:id="@+id/Next_btn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="24dp"
+        android:text="Next"
+        android:onClick="handleNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView10" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/noData"
+        android:layout_width="200dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="64dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cdA">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sad"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No Data Found"
+            app:layout_constraintTop_toTopOf="@id/cdB" />
+        <Button
+            android:id="@+id/backToQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            android:text="Go back To Quiz"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/currentIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/totalIndex"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:text="/10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
